@@ -1,0 +1,116 @@
+
+/*헤더부분 시작*/
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.header {
+
+    border-bottom: 1px solid #000;
+    padding-top: 20px;
+    flex-direction: column;
+}
+
+.header-top {
+    background-color:#F3E8FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-item {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.menu {
+    display: flex;
+    background-color: #F3E8FF;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    padding-left: 24px;
+    margin: 0 auto;
+}
+
+.menu-box {
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+.menu-button {
+    padding: 10px 12px;
+
+}
+
+.menu-text {
+    text-decoration: none;
+    color: #000000;
+}
+/*헤더 부분 끝*/
+/*토론적보 시작*/
+.gather-create-outlin-box{
+
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+.gather-create-outlin-top{
+    /*    토론정보를 입력해주세요*/
+    padding :24px 0;
+}
+
+.gather-create-book{
+    width:800px;
+    height: 500px;
+    border: 1px solid #000000;
+}
+/*토론제목*/
+.gather-create-debate-title{
+    padding :24px 0;
+}
+.title-box{
+    resize: none;
+    width: 800px;
+    height: 54px;
+    min-height: 54px;
+    max-height: 76px
+}
+.content-box{
+    resize:none;
+    width : 800px;
+    height: 1200px;
+    min-height: 54px;
+    max-height: 76px
+}
+.recruitment-period{
+    padding :24px 0;
+    display: flex;
+}
+.gather-create-debate-style{
+    padding :24px 0;
+}
+

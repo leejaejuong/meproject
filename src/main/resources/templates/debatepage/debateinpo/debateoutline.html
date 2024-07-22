@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/debateoutline.css}"/>
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+<!-- 토론정보 시작-->
+<div class="gather-create-outlin-box">
+
+    <div class="gather-create-outlin-top">
+        <h1>토론 정보를 입력해주세요</h1>
+    </div>
+
+    <div class="gather-create-book">
+        <span>책정보 구역 크기줄일꺼임</span>
+        <!--        책정보 칸-->
+    </div>
+<!--    토론제목-->
+    <div class="gather-create-debate-style">
+        <h1>토론제목</h1>
+        <textarea  class="title-box">
+
+        </textarea>
+    </div>
+<!--    토론개요-->
+    <div class="gather-create-debate-style">
+        <h1>토론 개요</h1>
+        <textarea class="content-box">
+
+        </textarea>
+    </div>
+<!--    토론 모집기간-->
+    <h1 class="gather-create-debate-style">모집기간</h1>
+    <div class="recruitment-period">
+
+<!--        시작날자-->
+        <input th:type="date">
+<!--        모집종료날자-->
+        <input th:type="date">
+    </div>
+<!--    토론 진행기간-->
+    <h1 class="gather-create-debate-style">토론 기간</h1>
+    <div class="recruitment-period">
+
+        <!--        시작날자-->
+        <input th:type="date">
+        <!--        모집종료날자-->
+        <input th:type="date">
+    </div>
+
+</div>
+</body>
+</html>

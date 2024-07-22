@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/debatemack.css}"/>
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+<!--토론선택하기-->
+<div class="obtion">
+    <div class="fadeIn">
+        <h1 class="gather-title"><span class="gather-title-text">어떤 종류의 토론을 하고 싶으세요?</span></h1>
+    </div>
+    <div class="gather-box">
+        <div class="fadeIn-style">
+
+            <div class="gather-create-option">
+                <h2 class="gather-create-title">
+                    <span class="gather-create-title-text">공고형</span>
+                    <span class="gather-create-content-text">내가 원하는 책으로 토론을하고싶어요</span>
+                </h2>
+            </div>
+            <div class="gather-create-radio">
+        <span class="gather-create-radio-box">
+            <input type="radio" class="gather-create-radio-butten">
+        </span>
+                <label class="gather-create-radio-line">
+                </label>
+            </div>
+
+        </div>
+<!--        오프라인-->
+        <div class="fadeIn-style">
+
+            <div class="gather-create-option">
+                <h2 class="gather-create-title">
+                    <span class="gather-create-title-text">자유형</span>
+                    <span class="gather-create-content-text">각자 자유롭게 책을 읽은후 의견을 나누고 싶어요</span>
+                </h2>
+            </div>
+            <div class="gather-create-radio">
+        <span class="gather-create-radio-box">
+            <input type="radio" class="gather-create-radio-butten">
+        </span>
+                <label class="gather-create-radio-line">
+                </label>
+            </div>
+
+        </div>
+<!--        혼자서 -->
+        <div class="fadeIn-style">
+
+        <div class="gather-create-option">
+            <h2 class="gather-create-title">
+                <span class="gather-create-title-text">장르형</span>
+                <span class="gather-create-content-text">특정 장르만 정한후 팀원과 함께 책을 고르고싶어요</span>
+            </h2>
+        </div>
+        <div class="gather-create-radio">
+        <span class="gather-create-radio-box">
+            <input type="radio" class="gather-create-radio-butten">
+        </span>
+            <label class="gather-create-radio-line">
+            </label>
+        </div>
+    </div>
+        <!--            버튼처리-->
+        <div class="gather-create-butten-div">
+            <dutton class="gather-create-butten">
+                다음
+            </dutton>
+        </div>
+    </div>
+</div>
+</body>
+</html>
