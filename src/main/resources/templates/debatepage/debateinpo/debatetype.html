@@ -12,6 +12,8 @@
     <div class="fadeIn">
         <h1 class="gather-title"><span class="gather-title-text">어떤 종류의 토론을 하고 싶으세요?</span></h1>
     </div>
+    <form action="/member/debatetype" method="post">
+<!--        공고형-->
     <div class="gather-box">
         <div class="fadeIn-style">
 
@@ -22,15 +24,14 @@
                 </h2>
             </div>
             <div class="gather-create-radio">
-        <span class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten">
-        </span>
-                <label class="gather-create-radio-line">
-                </label>
+        <label class="gather-create-radio-box">
+            <input type="radio" class="gather-create-radio-butten" name="debateType" value="1">
+        </label>
+
             </div>
 
         </div>
-<!--        오프라인-->
+<!--        자유형-->
         <div class="fadeIn-style">
 
             <div class="gather-create-option">
@@ -40,15 +41,15 @@
                 </h2>
             </div>
             <div class="gather-create-radio">
-        <span class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten">
-        </span>
+                <label class="gather-create-radio-box">
+                    <input type="radio" class="gather-create-radio-butten" name="debateType" value="2">
+                </label>
                 <label class="gather-create-radio-line">
                 </label>
             </div>
 
         </div>
-<!--        혼자서 -->
+<!--        장르형 -->
         <div class="fadeIn-style">
 
         <div class="gather-create-option">
@@ -58,20 +59,22 @@
             </h2>
         </div>
         <div class="gather-create-radio">
-        <span class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten">
-        </span>
+            <label class="gather-create-radio-box">
+                <input type="radio" class="gather-create-radio-butten" name="debateType" value="3">
+            </label>
             <label class="gather-create-radio-line">
             </label>
         </div>
     </div>
         <!--            버튼처리-->
-        <div class="gather-create-butten-div">
-            <dutton class="gather-create-butten">
+        <div class="gather-create-butten-div1">
+            <button class="gather-create-butten-div" >
                 다음
-            </dutton>
+            </button>
         </div>
     </div>
+    </form>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.studenst08.mapper.DebateInpoMapper">
+   <insert id="insertdebateinpo">
+<selectKey resultType="long" keyProperty="debateId" order="BEFORE">
+    select SEQ_DEBATE_ID.nextval from dual
+</selectKey>
+       insert into TBL_DEBATE_INFO(DEBATE_ID, MEM_DEB_POST, MEETING_ID, DEBATE_TYPE, TITLE, OUTLINE, GROUP_START_DATE, GROUP_END_DATE, DEBATE_START_DATE, DEBATE_END_DATE)
+       VALUES (#{debateId},#{memDebPost},#{meetingId},#{debateType},#{title},#{outLine},#{groupStartDate},#{groupEndDate},#{debateStartDate},#{debateEndDate})
+
+
+   </insert>
+
+    <select id="selectdebate">
+        select I.DEBATE_ID,D.DEBATE,T.TEETING_TYPE,P.DEBATE_TYPE, TITLE, OUTLINE,
+               TO_CHAR(I.GROUP_START_DATE,'YYYY-MM-DD') AS GROUP_START_DATE, TO_CHAR(GROUP_END_DATE,'YYYY-MM-DD')AS GROUP_END_DATE,
+               TO_CHAR(DEBATE_START_DATE,'YYYY-MM-DD')AS DEBATE_START_DATE, TO_CHAR(DEBATE_END_DATE,'YYYY-MM-DD')AS DEBATE_END_DATE
+        from TBL_DEBATE_INFO I JOIN TBL_MEMBER_DEBATE D
+                                    ON I.MEM_DEB_POST=D.MEM_DEB_INFO
+                               JOIN TBL_MEETING_TYPE T
+                                    ON I.MEETING_ID = T.MEETING_ID
+                               JOIN TBL_DEBATE_TYPE P
+                                    ON I.DEBATE_TYPE = P.DEBATE_TYPE_ID
+        where I.DEBATE_ID=#{debateId}
+    </select>
+</mapper>

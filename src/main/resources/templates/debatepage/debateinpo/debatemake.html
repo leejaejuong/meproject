@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/css/debatemack.css}"/>
     <script defer th:src="@{/js/debate/debateinpo.js}"></script>
@@ -9,14 +10,13 @@
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
 <!--토론선택하기-->
-<from method="post">
+<form th:action="@{/member/debatemake}" method="post">
 <div class="obtion">
     <div class="fadeIn">
         <h1 class="gather-title"><span class="gather-title-text">어떤 토론을 만들고 싶으세요?</span></h1>
     </div>
     <div class="gather-box">
         <div class="fadeIn-style">
-
             <div class="gather-create-option">
                 <h2 class="gather-create-title">
                     <span class="gather-create-title-text">온라인</span>
@@ -25,10 +25,9 @@
             </div>
             <div class="gather-create-radio">
         <label class="gather-create-radio-box">
-            <input type="radio"  class="gather-create-radio-butten" value="1">
+            <input type="radio" class="gather-create-radio-butten" name="meetingId" value="1">
         </label>
-                <label class="gather-create-radio-line">
-                </label>
+
             </div>
 
         </div>
@@ -36,16 +35,14 @@
         <div class="fadeIn-style">
 
             <div class="gather-create-option">
-                <h2 class="gather-c한그eate-title">
+                <h2 class="gather-create-title">
                     <span class="gather-create-title-text">오프라인</span>
                     <span class="gather-create-content-text">실제 만나서 토론을 하고싶어요</span>
                 </h2>
             </div>
             <div class="gather-create-radio">
-        <labal class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten"value="2">
-        </labal>
-                <label class="gather-create-radio-line">
+                <label class="gather-create-radio-box">
+                    <input type="radio" class="gather-create-radio-butten" name="meetingId" value="2">
                 </label>
             </div>
 
@@ -60,21 +57,19 @@
             </h2>
         </div>
         <div class="gather-create-radio">
-        <label class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten" value="3">
-        </label>
-            <label class="gather-create-radio-line">
+            <label class="gather-create-radio-box">
+                <input type="radio" class="gather-create-radio-butten" name="meetingId" value="3">
             </label>
         </div>
     </div>
         <!--            버튼처리-->
         <div class="gather-create-butten-div1">
-            <button type="button" class="gather-create-butten-div" >
+            <button type="submit"class="gather-create-butten-div" >
                 다음
             </button>
         </div>
     </div>
 </div>
-</from>
+</form>
 </body>
 </html>
