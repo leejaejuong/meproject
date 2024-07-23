@@ -9,6 +9,26 @@
 </head>
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
+<main class="board-main-box">
+<aside class="aside-total-box">
+    <div class="sticky">
+        <div class="aside-object">
+            <h1>프로필 사진 자리</h1>
+        </div>
+        <div class="aside-text">
+            <h3>아이디</h3>
+        </div>
+        <div class="aside-text">
+            <h2>닉네임</h2>
+        </div>
+        <div class="aside-text aside-mypage">
+            <h2>내 토론</h2>
+        </div>
+        <div class="aside-text">
+            <h2>내 포스트</h2>
+        </div>
+    </div>
+</aside>
 <!--토론선택하기-->
 <form th:action="@{/member/debatemake}" method="post">
 <div class="obtion">
@@ -25,7 +45,7 @@
             </div>
             <div class="gather-create-radio">
         <label class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten" name="meetingId" value="1">
+            <input type="radio" checked="checked" class="gather-create-radio-butten" name="meetingId" value="1">
         </label>
 
             </div>
@@ -42,7 +62,7 @@
             </div>
             <div class="gather-create-radio">
                 <label class="gather-create-radio-box">
-                    <input type="radio" class="gather-create-radio-butten" name="meetingId" value="2">
+                    <input type="radio"  class="gather-create-radio-butten" name="meetingId" value="2">
                 </label>
             </div>
 
@@ -63,13 +83,15 @@
         </div>
     </div>
         <!--            버튼처리-->
-        <div class="gather-create-butten-div1">
-            <button type="submit"class="gather-create-butten-div" >
+        <div class="gather-create-butten-div">
+
+            <button type="submit"class="gather-create-butten-dv1" >
                 다음
             </button>
         </div>
     </div>
 </div>
 </form>
+</main>
 </body>
 </html>

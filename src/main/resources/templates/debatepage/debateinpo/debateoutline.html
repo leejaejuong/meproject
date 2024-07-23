@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/css/debateoutline.css}"/>
+    <script defer th:src="@{/js/debate/debateinpo.js}"></script>
 </head>
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
@@ -34,23 +35,28 @@
     </div>
 <!--    토론 모집기간-->
     <h1 class="gather-create-debate-style">모집기간</h1>
+    <!--     모집 기간-->
     <div class="recruitment-period">
-
-<!--        시작날자-->
-        <div  style="left: 0%; width: 46.4286%;"></div>
-        <div class="ant-slider-mark"><span class="ant-slider-mark-text ant-slider-mark-text-active" style="left: 0%; transform: translateX(-50%);">1일</span><span class="ant-slider-mark-text" style="left: 100%; transform: translateX(-50%);">29일</span></div>
-<!--        모집종료날자-->
-        <input th:type="date">
+        <p> <span class="gather-value"></span> 일 동안 모집합니다 </p><br>
+        <input type="range" min="1" max="30" value="1" class="gather-group" name="groupdate">
+        <datalist >
+            <option value="1">1 일</option>
+            <option value="1">30 일</option>
+        </datalist>
     </div>
 <!--    토론 진행기간-->
     <h1 class="gather-create-debate-style">토론 기간</h1>
     <div class="recruitment-period">
-
-        <!--        시작날자-->
-        <input th:type="date">
-        <!--        모집종료날자-->
-        <input th:type="date">
+        <p> <span class="gather-value-d"></span> 일 동안 진행합니다 </p><br>
+        <input type="range" min="1" max="30" value="1" class="gather-group-d" name="debatedate">
+        <datalist >
+            <option value="1">1 일</option>
+            <option value="1">30 일</option>
+        </datalist>
     </div>
+
+    butt
+
 
 </div>
 </body>

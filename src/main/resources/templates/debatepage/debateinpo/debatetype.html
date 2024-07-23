@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/css/debatemack.css}"/>
+    <script defer th:src="@{/js/debate/debateinpo.js}"></script>
 </head>
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
+<main class="board-main-box">
+<aside class="aside-total-box">
+    <div class="sticky">
+        <div class="aside-object">
+            <h1>프로필 사진 자리</h1>
+        </div>
+        <div class="aside-text">
+            <h3>아이디</h3>
+        </div>
+        <div class="aside-text">
+            <h2>닉네임</h2>
+        </div>
+    </div>
+</aside>
 <!--토론선택하기-->
 <div class="obtion">
     <div class="fadeIn">
@@ -25,7 +40,7 @@
             </div>
             <div class="gather-create-radio">
         <label class="gather-create-radio-box">
-            <input type="radio" class="gather-create-radio-butten" name="debateType" value="1">
+            <input type="radio" checked="checked" class="gather-create-radio-butten" name="debateType" value="1">
         </label>
 
             </div>
@@ -67,14 +82,17 @@
         </div>
     </div>
         <!--            버튼처리-->
-        <div class="gather-create-butten-div1">
-            <button class="gather-create-butten-div" >
+        <div class="gather-create-butten-div">
+            <button class="gather-create-butten-before" >
+                이전
+            </button>
+            <button type="submit"class="gather-create-butten-dv1" >
                 다음
             </button>
         </div>
     </div>
     </form>
 </div>
-
+</main>
 </body>
 </html>
