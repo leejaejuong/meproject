@@ -86,27 +86,41 @@
 .aside-total-box{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    margin-left: 10px;
     padding: 28px 0;
+    width: 200px;
 
 }
 .sticky{
     position:sticky;
     top:20px;
+    padding-bottom: 10px;
 }
 .aside-object{
-    width: 216px;
-    margin-bottom: 8px;
+    width: 104px;
+    height: 104px;
+    margin-bottom: 20px;
+    border:1px solid #000000;
 }
 .board-object-box{
     display: flex;
     flex-direction: column;
-    width: 750px;
+    width: 900px;
     margin-left: 30px;
     padding-left:11px;
     border-left:1px solid #000000;
     border-right:1px solid #000000;
 
+}
+.aside-button{
+    background-color: #bd7f7f;
+    display:flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.aside-text{
+    padding-bottom: 5px;
+    max-height: 54px;
 }
 .board-object{
 

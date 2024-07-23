@@ -16,7 +16,7 @@ public class debateController {
 
     @GetMapping("/debateboard")
     public String debateboard() {
-        return "debatepage/debateinpo/debateboard";
+        return "debatepage/debateboard/debateboard";
     }
 
     @GetMapping("/debateoutline")
@@ -58,4 +58,5 @@ public class debateController {
     public String debateoutline() {
         return "debatepage/debateinpo/debateoutline";
     }
+
 }
