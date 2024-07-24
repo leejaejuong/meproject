@@ -14,7 +14,7 @@
 }
 
 .header-top {
-    background-color:#F3E8FF;
+    background-color:#dee2e6;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,27 +84,39 @@
 }
 
 .gather-create-book{
+    display: flex;
+
     width:800px;
     height: 300px;
-    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color:#f8f9fa;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 /*토론제목*/
 .gather-create-debate-title{
     padding :24px 0;
 }
 .title-box{
+    padding-top: 10px;
     resize: none;
     width: 800px;
     height: 54px;
     min-height: 54px;
-    max-height: 76px
+    max-height: 76px;
+    border: 1px solid #dee2e6;
+
 }
 .content-box{
+    padding-top: 10px;
     resize:none;
     width : 800px;
     height: 1200px;
-    min-height: 54px;
-    max-height: 76px
+
+    max-height: 76px;
+    border: 1px solid #dee2e6;
 }
 .recruitment-period{
     padding :10px 0;
