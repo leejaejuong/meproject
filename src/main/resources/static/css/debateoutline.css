@@ -258,7 +258,13 @@ datalist{
     resize: none;
     padding-left: 10px;
     font-size: 30px;
+
+
+
 }
+
+
+
 .modal-search-text:focus{
    outline: none;
 }
