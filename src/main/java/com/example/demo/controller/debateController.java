@@ -54,6 +54,7 @@ public class debateController {
     public String debatemake() {
         return "debatepage/debateinpo/debatemake";
     }
+
     @PostMapping("/debateoutline")
     public String debateoutline() {
         return "debatepage/debateinpo/debateoutline";

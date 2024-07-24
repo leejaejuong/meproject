@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="@{/css/test.css}" />
+<!--    <link rel="stylesheet" href="@{/css/test.css}" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header" th:fragment="header">
     <div class="header-top">
         <!--로고-->
-        <a href="" class="logo">북스프레소</a>
+        <a href="" class="logo">북 스 프 레 소</a>
         <!--        로그인 회원가입 로그아웃 -->
         <!--        th:if=""-->
-
+        <div class="menu">
+            <ul class="menu-box">
+                <li class="menu-button header-font"><a class="menu-text" th:href="@{/member/debatemake}">토론찾기</a></li>
+                <li class="menu-button header-font"><a class="menu-text" href="">검색</a></li>
+                <li class="menu-button header-font"><a class="menu-text" href="">포스트</a></li>
+                <li class="menu-button header-font"><a class="menu-text" href="">마이페이지</a></li>
+            </ul>
+        </div>
         <nav class="nav">
             <a href="" class="nav-item login">로그인</a>
             <a href="" class="nav-item signup">회원가입</a>
@@ -24,14 +34,7 @@
 <!--        </nav>-->
     </div>
 <!--    검색 메뉴-->
-    <div class="menu">
-        <ul class="menu-box">
-            <li class="menu-button"><a class="menu-text" th:href="@{/member/debatemake}">토론찾기</a></li>
-            <li class="menu-button"><a class="menu-text" href="">검색</a></li>
-            <li class="menu-button"><a class="menu-text" href="">포스트</a></li>
-            <li class="menu-button"><a class="menu-text" href="">마이페이지</a></li>
-        </ul>
-    </div>
+
 </header>
 </body>
 </html>
