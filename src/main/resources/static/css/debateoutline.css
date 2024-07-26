@@ -316,4 +316,11 @@ datalist{
     flex-direction: row-reverse;
     margin-top:10px
 }
+.gather-create-butten-div{
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0;
+    justify-content: space-between
+
+}
 
