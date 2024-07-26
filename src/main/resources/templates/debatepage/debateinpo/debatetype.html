@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/debatemack.css}"/>
-    <script defer th:src="@{/js/debate/debateinpo.js}"></script>
+    <script defer th:src="@{/js/debate/debatetype.js}"></script>
 </head>
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
@@ -30,8 +30,9 @@
     <div class="fadeIn">
         <h1 class="gather-title"><span class="gather-title-text">어떤 종류의 토론을 하고 싶으세요?</span></h1>
     </div>
-    <form action="/member/debatetype" method="post">
+
 <!--        공고형-->
+<!--    <form action="/member/debatemake" method="post">-->
     <div class="gather-box">
         <label for="com" class="fadeIn-style">
 
@@ -83,16 +84,24 @@
             <label class="gather-create-radio-line">
             </label>
         </div>
+
     </label>
+
+
         <!--            버튼처리-->
         <div class="gather-create-butten-div">
 
-            <button type="submit"class="gather-create-butten-dv1" >
+            <button type="submit" class="gather-create-butten-dv1 nexttype" >
                 다음
             </button>
+
+            <button type="submit" class="gather-create-butten-dv1 type-remove" >
+                이전
+            </button>
+
         </div>
-    </div>
-    </form>
+<!--    </form>-->
+
 </div>
 </main>
 </body>
