@@ -3,55 +3,71 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Jua", sans-serif;
+    font-family: "Dongle", sans-serif;
 }
 
 .header {
-    background-color:#F3E8FF;
-    border-bottom: 1px solid #000;
-    padding-top: 20px;
+
+    background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+    padding-top: 20px ;
+    padding-bottom:5px;
     flex-direction: column;
+
 }
 
 .header-top {
-
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     max-width: 1200px;
     padding: 0 24px;
     margin: 0 auto;
 }
-
+.header-font{
+    font-size : 30px
+}
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    /*font-size: 40px;*/
+    /*font-weight: bold;*/
     color: #000;
     text-decoration: none;
+}
+.logo-img{
+    width: 100px;
+    height: 100px;
 }
 
 .nav {
     display: flex;
+    margin-left: auto;
 }
 
 .nav-item {
-    font-size: 16px;
+    font-size: 30px;
     color: #000000;
     text-decoration: none;
     margin-left: 20px;
-    border: 1px solid #000000;
+
     border-radius: 5px;
     padding: 7px;
+}
+.nav-item:hover{
+    transform:scale(1.1);
+    transition-duration: 0.5s;
 }
 
 .menu {
     display: flex;
-    background-color: #F3E8FF;
     align-items: center;
     position: relative;
     max-width: 1200px;
     padding-left: 24px;
 
+}
+.menu-button:hover{
+    transform:scale(1.1);
+    transition-duration: 0.5s;
 }
 
 .menu-box {
@@ -62,7 +78,7 @@
 }
 
 .menu-button {
-    padding: 10px 12px;
+    padding: 0 20px;
 
 }
 
@@ -70,6 +86,105 @@
     text-decoration: none;
     color: #000000;
 }
+.login {
+}
+.signup{
+
+}
+/*헤더 부분 끝*/
+/*헤더부분 시작*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Dongle", sans-serif;
+}
+
+.header {
+
+    background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+    padding-top: 20px ;
+    padding-bottom:5px;
+    flex-direction: column;
+
+}
+
+.header-top {
+    display: flex;
+
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+.header-font{
+    font-size : 30px
+}
+.logo {
+    /*font-size: 40px;*/
+    /*font-weight: bold;*/
+    color: #000;
+    text-decoration: none;
+}
+.logo-img{
+    width: 100px;
+    height: 100px;
+}
+
+.nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+
+    border-radius: 5px;
+    padding: 7px;
+}
+.nav-item:hover{
+    transform:scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    padding-left: 24px;
+
+}
+.menu-button:hover{
+    transform:scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.menu-box {
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+.menu-button {
+    padding: 0 20px;
+
+}
+
+.menu-text {
+    text-decoration: none;
+    color: #000000;
+}
+.login {
+}
+.signup{
+
+}
+/*헤더 부분 끝*/
 /*헤더 부분 끝*/
 .board-total-box{
     display: flex;
@@ -108,9 +223,9 @@
     width: 900px;
     margin-left: 30px;
     padding-left:11px;
-    border-left:1px solid #000000;
-    border-right:1px solid #000000;
-
+    border-left:1px solid #dee2e6;
+    border-right:1px solid #dee2e6;
+    align-items: center;
 }
 .aside-button{
     background-color: #bd7f7f;
@@ -122,6 +237,61 @@
     padding-bottom: 5px;
     max-height: 54px;
 }
-.board-object{
+.board-object-in-box{
+    width:530px ;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-bottom:1px solid #dee2e6;
 
+}
+
+.board-object-user-img{
+    width: 36px;
+    height: 36px;
+}
+.board-object-user{
+    width:530px ;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+
+}
+.board-object-user-inpo{
+    display: flex;
+    flex-direction: column
+}
+.board-object-user-name{
+    font-size:20px
+}
+.board-object-user-date{
+    font-size:10px
+}
+.board-object-user-btn{
+    display: flex;
+}
+.bard-objleect-tito{
+    width:530px ;
+    margin: 10px 0
+}
+.board-object-contnet{
+    width:530px ;
+    margin: 10px 0;
+    padding-bottom: 30px;
+    border-bottom:1px solid #dee2e6;
+}
+.board-object-comment{
+display: flex;
+    flex-direction: column;
+
+
+}
+.board-object-comment-inop-box{
+    width:530px ;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.board-object-comment-text-box{
+    width:530px ;
 }

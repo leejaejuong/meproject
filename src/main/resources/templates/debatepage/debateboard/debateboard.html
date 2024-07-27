@@ -3,140 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnctect" href="https://fonts.googleapis.com">
+    <link rel="preconne" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" th:href="@{/css/debateboard.css}"/>
 </head>
 <body>
 <header th:replace="~{fragments/header :: header}"></header>
 <!--토론선택하기-->
 <div class="board-total-box">
-<main class="board-main-box">
-<!--    유저 정보-->
-    <aside class="aside-total-box">
-       <div class="sticky">
-        <div class="aside-object">
-            <h1>책사진자리</h1>
-        </div>
-        <div class="aside-text">
-            <h3>온라인</h3>
-        </div>
-        <div class="aside-text">
-            <h2>돈키호테(책제목)</h2>
-        </div>
-        <div class="aside-text">
-            <h4>돈키호테를 읽고 생각을 나눠요</h4>
-        </div>
-           <div class="aside-text">
-               <h6>2024-07-04 ~
-                   2024-08-04 </h6>
-           </div>
-           <div class="aside-button">
-                <h4>글쓰기</h4>
-           </div>
-        </div>
-    </aside>
-<!--    게시판-->
-    <div class="board-object-box">
-        <div class="board-object">
-            <h1>게시판</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
-        <div class="board-object">
-            <h1>게시판---------------------------------------------------</h1>
-        </div>
+    <main class="board-main-box">
+        <!--    유저 정보-->
+        <aside class="aside-total-box">
+            <div class="sticky">
+                <div class="aside-object">
+                    <h1>책사진자리</h1>
+                </div>
+                <div class="aside-text">
+                    <h3>온라인</h3>
+                </div>
+                <div class="aside-text">
+                    <h2>돈키호테(책제목)</h2>
+                </div>
+                <div class="aside-text">
+                    <h4>돈키호테를 읽고 생각을 나눠요</h4>
+                    <div class="aside-text">
+                        <h6>2024-07-04 ~
+                    </div>
+                    2024-08-04 </h6>
+                </div>
+                <div class="aside-button">
+                    <h4>글쓰기</h4>
+                </div>
+            </div>
+        </aside>
+        <!--    게시판-->
+        <div class="board-object-box">
+            <div class="board-object-in-box">
+<!--                <div class="board-object-user-img">-->
+<!--                    &lt;!&ndash;                <img src="/img/logo.png"/></div>&ndash;&gt;-->
+<!--                </div>-->
+                <div class="board-object-user">
+                    <div class="board-object-user-inpo">
+                        <div class="board-object-user-name"> 홍길동</div>
+                        <div class="board-object-user-date"> 3 달전</div>
+                    </div>
+                    <div class="board-object-user-btn">
+                        <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                            <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                            <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="bard-objleect-tito">타이틀 자리</div>
+                <div class="board-object-contnet">
+                    <p>🇺🇸 ‘더치페이하자.‘ & ‘내가 살게’를 영어로 어떻게 말할까요?
 
-    </div>
+                        Hi, Newneekers! 🧡
+
+                        미국에서 매일 밥을 같이 먹던 룸메이트가 있었습니다. 항상 밥을 같이 먹으니 더치페이하는 것이 더 편했어요. 언젠가 제가 더치페이하자고 하려고,
+                        “Let’s do Dutch pay.”
+                        라고 말했더니 친구가 쉽게 이해를 못했어요. 오랫동안 생각하고 대답을 하더라구요. 그럼 더 자연스럽게 뿜빠이(더치페이)하는 영어 표현은 뭘까요?
+
+                        ✏️ ‘Let’s split bills.’ [렛ㅊ 스플릿 빌즈]
+                        : 더치페이하자.
+                        bills는 청구서예요. split은 나누다라는 뜻이구요! 그래서 청구서를 나누자! 라는 뜻입니다.
+
+                        ✏️ ’Let’s go Dutch.’ [렛츠 고 덧치]
+                        : 더치페이하자.
+                        Dutch Pay라는 말보다, go Dutch로 표현해요.
+
+                        📍 오늘은 친구에게 사주고 싶다면?
+
+                        ✏️ ‘It’s on me. (계산하기 전에)’ [잇츠 온 미]
+                        : 내가 살게.
+
+                        ✏️ ‘I will treat you.’ [아윌 ㅌ륏 유]
+                        : 내가 살게.
+                        미국에서는 누군가에게 밥을 사주는 것을 ‘treat’ 이라는 동사로 표현해요.
+
+                        💬 예시
+
+                        🦔: “I am done. you have Zelle* right? Let’s split bills.”
+                        🐿️: “No worries. It’s on me.”
+
+                        🦔: “다 먹었다. 너 $$페이 있지? 더치페이하자.”
+                        🐿️: “걱정마. 내가 낼게.”
+
+                        *Zelle: 미국의 송금 어플
+
+                        그럼 오늘도 맛저하세요!
+                        Have a good one!<br>
+                        <img src="/img/logo.png"/></div>
+                </p>
+                <div class="board-object-comment">
+                    <div class="board-object-comment-inop-box">
+                        <div class="board-object-user-inpo">
+                            <div class="board-object-user-name"> 홍길동</div>
+                            <div class="board-object-user-date"> 3 달전</div>
+                        </div>
+
+                        <div class="board-object-user-btn">
+                            <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                                <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                                <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="board-object-comment-text-box">
+                        <p>안녕하세요! 더치페이할 때 Let's chip in! 이라는 표현도 써요! 근데 split bills를 더 많이 쓰더라구요 😇</p>
+                    </div>
+                </div>
+<!--                -->
+                <div class="board-object-comment">
+                    <div class="board-object-comment-inop-box">
+                        <div class="board-object-user-inpo">
+                            <div class="board-object-user-name"> 홍길동</div>
+                            <div class="board-object-user-date"> 3 달전</div>
+                        </div>
+
+                        <div class="board-object-user-btn">
+                            <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                                <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                                <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="board-object-comment-text-box">
+                        <p>안녕하세요! 더치페이할 때 Let's chip in! 이라는 표현도 써요! 근데 split bills를 더 많이 쓰더라구요 😇</p>
+                    </div>
+                </div>
+                <div class="board-object-comment">
+                    <div class="board-object-comment-inop-box">
+                        <div class="board-object-user-inpo">
+                            <div class="board-object-user-name"> 홍길동</div>
+                            <div class="board-object-user-date"> 3 달전</div>
+                        </div>
+
+                        <div class="board-object-user-btn">
+                            <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                                <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                                <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="board-object-comment-text-box">
+                        <p>안녕하세요! 더치페이할 때 Let's chip in! 이라는 표현도 써요! 근데 split bills를 더 많이 쓰더라구요 😇</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+<!--            =============================-->
+            <div class="board-object-in-box">
+<!--                <div class="board-object-user-img">-->
+<!--                    &lt;!&ndash;                <img src="/img/logo.png"/></div>&ndash;&gt;-->
+<!--                </div>-->
+                <div class="board-object-user">
+                    <div class="board-object-user-inpo">
+                        <div class="board-object-user-name"> 홍길동</div>
+                        <div class="board-object-user-date"> 3 달전</div>
+                    </div>
+                    <div class="board-object-user-btn">
+                        <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                            <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                            <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="bard-objleect-tito">타이틀 자리</div>
+                <div class="board-object-contnet">
+                    <p>🇺🇸 ‘더치페이하자.‘ & ‘내가 살게’를 영어로 어떻게 말할까요?
+
+                        Hi, Newneekers! 🧡
+
+                        미국에서 매일 밥을 같이 먹던 룸메이트가 있었습니다. 항상 밥을 같이 먹으니 더치페이하는 것이 더 편했어요. 언젠가 제가 더치페이하자고 하려고,
+                        “Let’s do Dutch pay.”
+                        라고 말했더니 친구가 쉽게 이해를 못했어요. 오랫동안 생각하고 대답을 하더라구요. 그럼 더 자연스럽게 뿜빠이(더치페이)하는 영어 표현은 뭘까요?
+
+                        ✏️ ‘Let’s split bills.’ [렛ㅊ 스플릿 빌즈]
+                        : 더치페이하자.
+                        bills는 청구서예요. split은 나누다라는 뜻이구요! 그래서 청구서를 나누자! 라는 뜻입니다.
+
+                        ✏️ ’Let’s go Dutch.’ [렛츠 고 덧치]
+                        : 더치페이하자.
+                        Dutch Pay라는 말보다, go Dutch로 표현해요.
+
+                        📍 오늘은 친구에게 사주고 싶다면?
+
+                        ✏️ ‘It’s on me. (계산하기 전에)’ [잇츠 온 미]
+                        : 내가 살게.
+
+                        ✏️ ‘I will treat you.’ [아윌 ㅌ륏 유]
+                        : 내가 살게.
+                        미국에서는 누군가에게 밥을 사주는 것을 ‘treat’ 이라는 동사로 표현해요.
+
+                        💬 예시
+
+                        🦔: “I am done. you have Zelle* right? Let’s split bills.”
+                        🐿️: “No worries. It’s on me.”
+
+                        🦔: “다 먹었다. 너 $$페이 있지? 더치페이하자.”
+                        🐿️: “걱정마. 내가 낼게.”
+
+                        *Zelle: 미국의 송금 어플
+
+                        그럼 오늘도 맛저하세요!
+                        Have a good one!<br>
+                        <img src="/img/logo.png"/></div>
+                </p>
+                <div class="board-object-comment">
+                    <div class="board-object-comment-inop-box">
+                        <div class="board-object-user-inpo">
+                            <div class="board-object-user-name"> 홍길동</div>
+                            <div class="board-object-user-date"> 3 달전</div>
+                        </div>
+
+                        <div class="board-object-user-btn">
+                            <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                                <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                                <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="board-object-comment-text-box">
+                        <p>안녕하세요! 더치페이할 때 Let's chip in! 이라는 표현도 써요! 근데 split bills를 더 많이 쓰더라구요 😇</p>
+                    </div>
+                </div>
+                <div class="board-object-comment">
+                    <div class="board-object-comment-inop-box">
+                        <div class="board-object-user-inpo">
+                            <div class="board-object-user-name"> 홍길동</div>
+                            <div class="board-object-user-date"> 3 달전</div>
+                        </div>
+
+                        <div class="board-object-user-btn">
+                            <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                                <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                                <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="board-object-comment-text-box">
+                        <p>안녕하세요! 더치페이할 때 Let's chip in! 이라는 표현도 써요! 근데 split bills를 더 많이 쓰더라구요 😇</p>
+                    </div>
+                </div>
+                <div class="board-object-comment">
+                    <div class="board-object-comment-inop-box">
+                        <div class="board-object-user-inpo">
+                            <div class="board-object-user-name"> 홍길동</div>
+                            <div class="board-object-user-date"> 3 달전</div>
+                        </div>
+
+                        <div class="board-object-user-btn">
+                            <svg class="fill-current text-gray-450 size-6 md:size-[18px]" width="24" height="24"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.2002 12C4.2002 12.9964 5.00377 13.8 6.0002 13.8C6.99662 13.8 7.80019 12.9964 7.80019 12C7.80019 11.0035 6.99662 10.2 6.0002 10.2C5.00377 10.2 4.2002 11.0035 4.2002 12Z"></path>
+                                <path d="M10.2002 12C10.2002 12.9964 11.0038 13.8 12.0002 13.8C12.9966 13.8 13.8002 12.9964 13.8002 12C13.8002 11.0035 12.9966 10.2 12.0002 10.2C11.0038 10.2 10.2002 11.0035 10.2002 12Z"></path>
+                                <path d="M16.2002 12C16.2002 12.9964 17.0038 13.8 18.0002 13.8C18.9966 13.8 19.8002 12.9964 19.8002 12C19.8002 11.0035 18.9966 10.2 18.0002 10.2C17.0038 10.2 16.2002 11.0035 16.2002 12Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="board-object-comment-text-box">
+                        <p>안녕하세요! 더치페이할 때 Let's chip in! 이라는 표현도 써요! 근데 split bills를 더 많이 쓰더라구요 😇</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        </div>
 
 
 </div>
