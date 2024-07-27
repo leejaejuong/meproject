@@ -67,4 +67,9 @@ public class debateController {
         return "debatepage/debateboard/debateboard";
     }
 
+    @GetMapping("/mainpage")
+    public String mainpage() {
+        return "mainpage/mainpage";
+    }
+
 }

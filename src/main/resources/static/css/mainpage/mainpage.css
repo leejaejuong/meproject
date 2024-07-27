@@ -91,3 +91,109 @@
 
 }
 /*헤더 부분 끝*/
+.book-cover{
+    box-sizing: border-box;
+}
+.book-cover-in{
+    padding-top: 10px;
+    height: 100px;
+    width: 72px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.mainpage-main-box{
+    max-width: 1200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+}
+.mainpage-debate-total-box {
+    display: inline-flex;
+}
+.mainpage-debate-box{
+    height: 400px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+
+}
+.mainpage-debate-text{
+font-size : 30px
+
+}
+.book-ul-st{
+    list-style-type: none;
+    display: flex;
+}
+.meeting-type{
+    list-style-type: none;
+    border-radius: 4px;
+    font-size: 15px;
+    min-width: 22px;
+    height: 20px;
+    background-color:#efefef;
+}
+.meeting-date{
+    display: flex;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color:#40a9ff;
+}
+.book-ul-styel{
+    padding:0 10px;
+    margin: 0 5px;
+}
+.book-titile{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+.book-content{
+    padding-top: 20px;
+    overflow: hidden;
+}
+.book-content-con{
+    max-width: 280px;
+    max-height: 100px;
+    margin-top: 8px;
+    padding: 12px 8px;
+    background-color: #fafaf6;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+.box-style{
+    overflow: hidden;
+    padding: 16px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .06), 2px 2px 10px rgba(0, 0, 0, .04);
+    border-radius: 12px;
+    margin-left: 20px;
+}
+.back-style{
+    filter: blur(5px);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 200%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1
+}
+.mainpage-debate-object-box{
+    width: 320px;
+
+ }
