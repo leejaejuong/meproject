@@ -13,15 +13,15 @@
     <div class="header-top">
         <!--로고-->
         <div class="logo">
-            <a href=""> <img class="logo-img"src="/img/logo.png" alt="로고"/> </a>
+            <a th:href="@{/member/mainpage}"> <img class="logo-img"src="/img/logo.png" alt="로고"/> </a>
 
         </div>
         <!--        로그인 회원가입 로그아웃 -->
 
         <div class="menu">
             <ul class="menu-box">
-                <li class="menu-button header-font"><a class="menu-text" th:href="@{/member/debatemake}">토론찾기</a></li>
-                <li class="menu-button header-font"><a class="menu-text" href="">검색</a></li>
+                <li class="menu-button header-font"><a class="menu-text" th:href="@{/member/debatemain}">토론찾기</a></li>
+                <li class="menu-button header-font"><a class="menu-text" th:href="@{/member/search}">검색</a></li>
                 <li class="menu-button header-font"><a class="menu-text" href="">포스트</a></li>
                 <li class="menu-button header-font"><a class="menu-text" href="">마이페이지</a></li>
             </ul>

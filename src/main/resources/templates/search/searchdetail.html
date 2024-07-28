@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/header.css}"/>
+    <link rel="stylesheet" th:href="@{/css/search/search_detail.css}"/>
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+
+        <div class="detail_contents">
+            <div class="contents">
+                <!-- 헤더 및 도서 정보 시작 -->
+                <div class="book_info">
+                    <div class="book_pic">
+                        <img class="pic_input" src="https://i.ytimg.com/vi/IBG4hCwqq6U/maxresdefault.jpg" alt="">
+                    </div>
+                    <div class="book_cover">
+                        <div class="book_header">
+                            <p class="book_title">돌이킬 수 있는</p>
+                            <p class="book_author">문목하 지음</p>
+                            <p class="book_info_text">
+                                <a href="" id="a_tag">아작</a>
+                                <span class="mid_dot"></span>
+                                <a href="" id="a_tag">소설</a>
+                                <span class="mid_dot"></span>
+                                <span class="book_date">2018.12.05</span>
+                            </p>
+                            <div class="book_footer">
+                                <div class="book_footer_count">이 책이 담긴 서재</div>
+                                <b class="count">3.6만+</b>
+                            </div>
+                        </div>  
+                        <div class="read_btn">토론 하기</div>
+                        <div class="pick_btn">구입 하기</div>
+                        <div class="heart_btn">♡</div>
+                        </div>
+
+                    </div>
+                    <!-- 헤더 및 도서 정보 끝 -->
+                    
+                    <!-- 중간 부분 시작 -->
+
+                    <!-- 이 책의 장르와 비슷한 토론 -->
+                    <div class="similar_debate">
+                        <div class="simliar_title">이 책과 비슷한 장르의 토론</div>
+                        <div class="debate_list"> 
+                            <div class="debate_pic"></div>
+                            <div class="debate_title"></div>
+                            <div class="debate_point">  추천 포인트</div>
+                            <div class="debate_point_detail"></div>
+                        </div>
+                        <div class="debate_list">
+                            <div class="debate_pic"></div>
+                            <div class="debate_title"></div>
+                            <div class="debate_point">추천 포인트</div>
+                            <div class="debate_point_detail"></div>
+                        </div>
+                        <div class="debate_list">
+                            <div class="debate_pic"></div>
+                            <div class="debate_title"></div>
+                            <div class="debate_point">추천 포인트</div>
+                            <div class="debate_point_detail"></div>
+                        </div>
+                        <div class="debate_list">
+                            <div class="debate_pic"></div>
+                            <div class="debate_title"></div>
+                            <div class="debate_point">추천 포인트</div>
+                            <div class="debate_point_detail"></div>
+                        </div>
+                    </div>
+
+                    <!-- 리뷰 화면 -->
+                    <div class="review">
+                        <div class="review_title">한 줄 리뷰</div>
+                        <div class="review_content"></div>
+                        <div class="review_comment">
+                            <input type="text" placeholder="다양한 생각을 남겨주세요" style="font-size: 20px; width: 1200px; height: 80px; border: 1px solid #dfdfdf;" class="comment_write">
+                            <button type="button" class="submit_btn">등록</button>
+                        </div>
+                    </div>
+
+                    <!-- 주변 도서관 -->
+                    <div class="library"> 주위 도서관 검색</div>
+                    <div class="library_list"></div>
+                    
+                    <!-- 이 책의 포스트 -->
+                    <div class="post_title">이 책의 포스트</div>
+                    <div class="post_list">
+                        <div class="post_list_detail"></div>
+                        <div class="post_list_detail"></div>
+                        <div class="post_list_detail"></div>
+                        <div class="post_list_detail"></div>
+                    </div>
+                    </div>
+                     
+                
+                </div>
+               
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+     
+</body>
+</html>

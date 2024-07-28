@@ -71,5 +71,17 @@ public class debateController {
     public String mainpage() {
         return "mainpage/mainpage";
     }
+    @GetMapping("/debatemain")
+    public String debatemain() {
+        return "debatepage/debateboard/debatemain";
+    }
+    @GetMapping("/searchdetail")
+    public String searchdetail() {
+        return "search/searchdetail";
+    }
+    @GetMapping("/search")
+    public String search() {
+        return "search/search";
+    }
 
 }
