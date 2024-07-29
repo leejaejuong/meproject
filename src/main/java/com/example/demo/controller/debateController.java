@@ -83,5 +83,9 @@ public class debateController {
     public String search() {
         return "search/search";
     }
+    @GetMapping("/join")
+    public String join() {
+        return "login/join";
+    }
 
 }

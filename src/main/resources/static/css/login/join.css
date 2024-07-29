@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.header{
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    padding: 20px 0;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+.nav{
+    display: flex;
+}
+.nav{
+    font-size: 16px;
+    color: #00c7ae;
+    text-decoration: none;
+    margin-left: 20px;
+    border: 1px solid #00c7ae;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+/* 회원가입 */
+
+.full-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.join {
+    width: 100% ;
+    font-size: 26px;
+    font-weight: normal;
+    padding-top: 55px;
+    margin-bottom: 32px;
+    text-align: center;
+
+    border-bottom: 3px black;
+}
+
+.items {
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item {
+    padding-top: 24px;
+}
+
+
+
+.input-date{
+    font-weight: bold;
+    margin-bottom: 18px;
+    
+}
+
+.input-date,
+.typoBox{
+    font-size: 16px;
+    color: #373f57;
+    margin: 8px 0 ;
+}
+
+.inputBox > input {
+    width: 334px;
+    height: 46px;
+    border: 1px solid #8491a7;
+    border-radius: 4px;
+    /* color: var(--gray100); */
+    padding-left: 10px;
+}
+
+.msgInvalid {
+        font-size: 13px;
+        color: #d64141;
+}
+
+.button {
+    padding: 10px 15px 12px;
+    margin-top: 18px;
+    height: 48px;
+    width: 347px;
+    font-size: 16px;
+    line-height: 24px;
+
+    border-radius: 4px;
+}
+
+/* .msgInvalid{
+    color: #5C667B;
+} */
+
+.item > p {
+    color: #5C667B;
+    font-size: 13px;
+    
+    padding-top: 4px;
+}
