@@ -76,6 +76,8 @@
 
         bindEvents();
     });
+}
+{
     document.addEventListener('DOMContentLoaded', () => {
         // ul 클래스 이름
         let $list = document.querySelector('#offline');
@@ -237,6 +239,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // 요소 복제 기존요소를 모두복제하여 리스트 끝에 추가
+    let $items = Array.from($list.children);//요소들을 배열로 저장
+    let itemCount = $items.length;//요소들 개수
+    $items.forEach(item => {
+        $list.appendChild(item.cloneNode(true));
+        // 리스트 끝에 복제본 추가
+        $list.insertBefore(item.cloneNode(true), $list.firstChild);
+    //     리스트 시작에 복제본 추가
+    });
+
     // 화면에 보이는 범위
     let $listScrollWidth = $list.scrollWidth;
     // 화면 밖까지의 전체 범위
@@ -245,13 +257,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let startX = 0;
     let nowX = 0;
     let endX = 0;
-    let listX = 0;
-    // 현재 스크롤 위치
+    let listX = -$listScrollWidth / 2; // 시작 위치를 리스트의 중간으로 설정
+    let isMouseDown = false;
 
     const getClientX = (e) => {
         return e.touches ? e.touches[0].clientX : e.clientX;
     };
-    //  좌표 정보를 가지고있는 대상을 가지고온다(내가 움직이고싶은 대상 좌표값을 가져온다)
+
     const getTranslateX = () => {
         const transformMatrix = getComputedStyle($list).transform;
         if (transformMatrix !== 'none') {
@@ -260,32 +272,40 @@ document.addEventListener('DOMContentLoaded', () => {
         return 0;
     };
 
-    //  현재 좌표 변경값을 저장 한다
     const setTranslateX = (x) => {
         $list.style.transform = `translateX(${x}px)`;
     };
-    //  이벤트 처리
+
     const onScrollStart = (e) => {
         startX = getClientX(e);
         listX = getTranslateX();
+        isMouseDown = true;
         window.addEventListener('mousemove', onScrollMove);
         window.addEventListener('touchmove', onScrollMove);
         window.addEventListener('mouseup', onScrollEnd);
         window.addEventListener('touchend', onScrollEnd);
     };
 
-
     const onScrollMove = (e) => {
+        if (!isMouseDown) return;
+
         nowX = getClientX(e);
-        let newX=listX + nowX - startX;
-        if(newX > 0){
-            newX=0;
-        }else if(newX < (($listClientWidth-1200)*-1)){
-            newX=(($listClientWidth-1200)*-1);
+        let newX = listX + nowX - startX;
+
+        // 순환 스크롤 논리
+        if (newX > 0) {
+            newX = -$listScrollWidth / 2 + (newX % ($listScrollWidth / 2));
+        } else if (newX < -($listScrollWidth-2400)) {
+            newX = -$listScrollWidth / 2 + (newX % ($listScrollWidth / 2));
         }
+        console.log("newx"+newX);
+        console.log("$listScro"+$listScrollWidth)
+        console.log(-($listScrollWidth-2400))
         setTranslateX(newX);
     };
-    const onScrollEnd = (e) => {
+
+    const onScrollEnd = () => {
+        isMouseDown = false;
         window.removeEventListener('mousemove', onScrollMove);
         window.removeEventListener('touchmove', onScrollMove);
         window.removeEventListener('mouseup', onScrollEnd);
@@ -304,17 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $list.addEventListener('click', onClick);
     };
 
+    setTranslateX(listX);
     bindEvents();
 });
 
-
-
-{  // TEST
-    let $test = document.querySelectorAll('.debate-title')
-
-    $test.forEach(ele => {
-        ele.addEventListener('click', function () {
-            location.href = '/member/debateboard'
-        })
-    })
-}
