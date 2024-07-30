@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="preconnctect" href="https://fonts.googleapis.com">
-    <link rel="preconne" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/debateoutline.css}"/>
     <link rel="stylesheet" th:href="@{/css/header.css}"/>
     <script defer th:src="@{/js/debate/debateoutline.js}"></script>
@@ -42,7 +42,7 @@
 <div class="gather-create-outlin-box">
     
     <div class="gather-create-outlin-top">
-        <h1>토론 정보를 입력해주세요</h1>
+        <div class="title">토론 정보를 입력해주세요</div>
     </div>
     <!--        책정보 칸-->
 
@@ -69,10 +69,12 @@
         </textarea>
     </div>
 <!--    토론 모집기간-->
-    <div class="debate-centent-title">모집기간</div>
+    <div class="debate-centent-title paa">모집기간</div>
     <!--     모집 기간-->
     <div class="recruitment-period">
-        <p> <span class="gather-value"></span> 일 동안 모집합니다 </p><br>
+        <p> <span class="gather-value"></span> 일 동안 모집합니다 </p>
+        <span class="gather-value-in"></span>
+        <span class="gather-value-out"></span>
         <input type="range" min="1" max="30" value="1" class="gather-group" name="groupdate">
         <datalist >
             <option value="1">1 일</option>
@@ -80,9 +82,9 @@
         </datalist>
     </div>
 <!--    토론 진행기간-->
-    <div class="debate-centent-title">토론 기간</div>
+    <div class="debate-centent-title paa">토론 기간</div>
     <div class="recruitment-period">
-        <p> <span class="gather-value-d"></span> 일 동안 진행합니다 </p><br>
+        <p> <span class="gather-value-d"></span> 일 동안 진행합니다 </p> <p><span class="gather-value-in"></span></p><br>
         <input type="range" min="1" max="30" value="1" class="gather-group-d" name="debatedate">
         <datalist >
             <option value="1">1 일</option>

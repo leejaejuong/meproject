@@ -127,10 +127,10 @@ font-size : 30px;
 }
 .book-content-con{
     max-width: 280px;
-    height: 100px;
+    height: 100%;
     margin-top: 8px;
     padding: 8px 8px;
-    background-color: #fafaf6;
+    background-color: #efefe7;
     border-radius: 8px;
 
 }
@@ -187,21 +187,19 @@ font-size : 30px;
     padding-right: 1rem;
     list-style: none;
     user-select: none;
+    height: 100%;
 
  }
 .post-book-cover{
     margin: -16px -16px 0;
 }
-.book-object-book-img{
-     max-width: 125px;
-   max-height: 181px;
-    height: 100%;
+.post-content-title{
+    padding-bottom: 16px;
 }
-.img-style{
-    -webkit-user-drag: none;
-    user-drag:none;
+.post-title{
+    font-size: 20px;
+    font-weight: bold;
 }
-
 .box{
     margin:40px ;
 }

@@ -35,10 +35,21 @@
 { //range 바
     let $slider = document.querySelector('.gather-group');
     let $output = document.querySelector('.gather-value');
+    let $Datenow=document.querySelector('.gather-value-in')
+    let $Datenew=document.querySelector('.gather-value-out')
+
+    let nowDate=new Date();
     $output.innerHTML = $slider.value;
     $slider.oninput = function () {
         $output.innerHTML = this.value;
+        console.log("nowdate"+nowDate.getDate())
+        console.log("계산"+nowDate.getDate()+parseInt(this.value));
+        let dateval=String(nowDate.setDate(nowDate.getDate()+parseInt(this.value)));
+        let newdate=new Date(dateval);
+        console.log(dateval);
     }
+    $Datenow.innerHTML=nowDate.toLocaleDateString();
+
     let $sliderD = document.querySelector('.gather-group-d');
     let $outputD = document.querySelector('.gather-value-d');
     $outputD.innerHTML = $sliderD.value;

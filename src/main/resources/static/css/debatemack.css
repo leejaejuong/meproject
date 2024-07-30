@@ -33,15 +33,17 @@
     margin-bottom: 30px;
 }
 .gather-title-text{
+    font-size: 30px;
+
     /*어떤 종류의 토론을 하고싶으세요*/
 }
 .gather-create-title-text{
     /*    온라인 오프라인*/
     font-weight: bold;
-    font-size: 40px;
+    font-size: 25px;
 }
 .gather-create-content-text{
-    font-size: 30px;
+    font-size: 20px;
     /*    컨텐트*/
 }
 .gather-box{
@@ -111,9 +113,7 @@ input[type='radio']:checked{
     justify-content: space-between
 
 }
-.gather-create-butten-dv1{
-    border: 1px solid #000000;
-}
+
 .board-total-box{
     display: flex;
     justify-content: space-between;
@@ -175,11 +175,9 @@ input[type='radio']:checked{
     background-color: #212529;
     color: #ffd200;
     border-radius: 8px;
-    width: 67px;
-    height: 40px;
+    width: 90px;
+    height: 50px;
     font-size: 30px;
-}
-.remove{
 
 }
 
