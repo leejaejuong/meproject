@@ -7,7 +7,6 @@
 }
 .book-cover-in{
     padding-top: 10px;
-    height: 100px;
     position: relative;
     overflow: hidden;
     box-sizing: border-box
@@ -148,7 +147,7 @@ font-size : 30px;
     transform: scale(1.1);
 }
 .box-in-style{
-    width: 75px;
+
     margin: 0 auto;
     position: relative;
     z-index: 0;
@@ -157,8 +156,8 @@ font-size : 30px;
     background-color: #8b8b8b;
 }
 .img-size{
-    width: 75px;
-    height: 86px;
+    width: 150px;
+    height: 220px;
 }
 
 .manpage-debate-object-box{
@@ -170,4 +169,63 @@ font-size : 30px;
  }
 .post-book-cover{
     margin: -16px -16px 0;
+}
+.manpage-famous-total-box {
+    display: inline-flex;
+    padding: 20px;
+    height: 280px;
+    width: 1400px;
+    margin-bottom: 400px;
+}
+.manpage-famous-box{
+    padding: 20px 0;
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.book-famous-in{
+    padding-top: 10px;
+
+    overflow: hidden;
+    box-sizing: border-box
+}
+.manpage-famous-object-box{
+
+}
+.book-famous-cover{
+padding:  0 30px;
+}
+.back-famous-style{
+    -webkit-filter: blur(5px);
+    filter: blur(30px);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 200%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.box-famous-in-style{
+
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    padding-top: 0;
+
+    background-color: #8b8b8b;
+}
+.img-fomus-size{
+    width: 150px;
+    height: 220px;
+}
+.box{
+    margin-bottom:40px ;
 }

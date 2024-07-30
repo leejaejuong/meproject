@@ -230,10 +230,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     bindEvents();
-});
+})
+//수정중
 document.addEventListener('DOMContentLoaded', () => {
     // ul 클래스 이름
-    let $list = document.querySelector('#book');
+    let $list = document.querySelector('');
     if (!$list) {
         console.error("Element not found");
         return;
@@ -328,3 +329,91 @@ document.addEventListener('DOMContentLoaded', () => {
     bindEvents();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const $list = document.querySelector('#book');
+    if (!$list) {
+        console.error("Element not found");
+        return;
+    }
+
+    const $items = Array.from($list.children);
+    const itemCount = $items.length;
+
+    // 복제하여 순환 구조 만들기
+    $items.forEach(item => {
+        $list.appendChild(item.cloneNode(true));
+        $list.insertBefore(item.cloneNode(true), $list.firstChild);
+    });
+
+    const $listScrollWidth = $list.scrollWidth;
+    const $listClientWidth = $list.clientWidth;
+    let startX = 0;
+    let nowX = 0;
+    let listX = -$listScrollWidth / 2;
+    let isMouseDown = false;
+
+    const getClientX = (e) => {
+        return e.touches ? e.touches[0].clientX : e.clientX;
+    };
+
+    const getTranslateX = () => {
+        const transformMatrix = getComputedStyle($list).transform;
+        if (transformMatrix !== 'none') {
+            return parseInt(transformMatrix.split(/[^\-0-9]+/g)[5]);
+        }
+        return 0;
+    };
+
+    const setTranslateX = (x) => {
+        $list.style.transform = `translateX(${x}px)`;
+    };
+
+    const onScrollStart = (e) => {
+        startX = getClientX(e);
+        listX = getTranslateX();
+        isMouseDown = true;
+        window.addEventListener('mousemove', onScrollMove);
+        window.addEventListener('touchmove', onScrollMove);
+        window.addEventListener('mouseup', onScrollEnd);
+        window.addEventListener('touchend', onScrollEnd);
+    };
+
+    const onScrollMove = (e) => {
+        if (!isMouseDown) return;
+
+        nowX = getClientX(e);
+        let newX = listX + nowX - startX;
+
+        // 순환 스크롤 논리
+        if (newX > 0) {
+            newX = -$listScrollWidth / 2 + (newX % ($listScrollWidth / 2));
+        } else if (newX < -$listScrollWidth + $listClientWidth) {
+            newX = -$listScrollWidth / 2 + (newX % ($listScrollWidth / 2));
+        }
+
+        setTranslateX(newX);
+    };
+
+    const onScrollEnd = () => {
+        isMouseDown = false;
+        window.removeEventListener('mousemove', onScrollMove);
+        window.removeEventListener('touchmove', onScrollMove);
+        window.removeEventListener('mouseup', onScrollEnd);
+        window.removeEventListener('touchend', onScrollEnd);
+    };
+
+    const onClick = (e) => {
+        if (startX - nowX !== 0) {
+            e.preventDefault();
+        }
+    };
+
+    const bindEvents = () => {
+        $list.addEventListener('mousedown', onScrollStart);
+        $list.addEventListener('touchstart', onScrollStart);
+        $list.addEventListener('click', onClick);
+    };
+
+    setTranslateX(listX);
+    bindEvents();
+});
