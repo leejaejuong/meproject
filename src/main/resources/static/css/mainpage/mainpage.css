@@ -188,6 +188,7 @@ font-size : 30px;
     list-style: none;
     user-select: none;
     height: 100%;
+    padding-bottom: 10px;
 
  }
 .post-book-cover{

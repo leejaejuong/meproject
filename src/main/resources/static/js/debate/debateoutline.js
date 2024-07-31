@@ -39,21 +39,37 @@
     let $Datenew=document.querySelector('.gather-value-out')
 
     let nowDate=new Date();
+    let startdate ;
+    //range 에다른 일수 계산
     $output.innerHTML = $slider.value;
     $slider.oninput = function () {
         $output.innerHTML = this.value;
-        console.log("nowdate"+nowDate.getDate())
-        console.log("계산"+nowDate.getDate()+parseInt(this.value));
-        let dateval=String(nowDate.setDate(nowDate.getDate()+parseInt(this.value)));
-        let newdate=new Date(dateval);
-        console.log(dateval);
+        $Datenew.innerHTML=addDate(nowDate,parseInt(this.value));
+        startdate=this.value;
     }
     $Datenow.innerHTML=nowDate.toLocaleDateString();
 
     let $sliderD = document.querySelector('.gather-group-d');
     let $outputD = document.querySelector('.gather-value-d');
+    let $DatenowD=document.querySelector('.gather-value-ind')
+    let $DatenewD=document.querySelector('.gather-value-outd')
     $outputD.innerHTML = $sliderD.value;
+
+
+
     $sliderD.oninput = function () {
         $outputD.innerHTML = this.value;
+        let i =addDate(nowDate,startdate);
+       $DatenowD.innerHTML=i;
+        $DatenewD.innerHTML=addDate(i,this.value);
     }
+
+    function addDate(date,days){
+        let today=new Date(date);//
+        let dates=today.setDate(today.getDate()+parseInt(days));
+        return today.toLocaleDateString();
+    }
+}
+{
+
 }
