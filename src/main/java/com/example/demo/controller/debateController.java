@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class debateController {
     private final DebateInposervice debateInposervice;
 
-
-
     @GetMapping("/debateoutline")
     public String debateoutline(HttpSession session) {
         System.out.println("토론정보창");
@@ -67,13 +65,13 @@ public class debateController {
         return "debatepage/debateboard/debateboard";
     }
 
-    @GetMapping("/mainpage")
+    @GetMapping("/")
     public String mainpage() {
         return "mainpage/mainpage";
     }
-    @GetMapping("/debatemain")
-    public String debatemain() {
-        return "debatepage/debateboard/debatemain";
+    @GetMapping("/postmain")
+    public String postmain() {
+        return "debatepage/debateboard/postmain";
     }
     @GetMapping("/searchdetail")
     public String searchdetail() {
@@ -86,6 +84,14 @@ public class debateController {
     @GetMapping("/join")
     public String join() {
         return "login/join";
+    }
+    @GetMapping("/debatewrite")
+    public String debatewrite() {
+        return "debatepage/debateboard/debatewrite";
+    }
+    @GetMapping("/debatemain")
+    public String debatemain() {
+        return "debatepage/debateboard/debatemain";
     }
 
 }

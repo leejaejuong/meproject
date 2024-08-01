@@ -43,7 +43,9 @@
     //range 에다른 일수 계산
     $output.innerHTML = $slider.value;
     $slider.oninput = function () {
+        //range 바에 따른 일수를 계산하여 반영한다
         $output.innerHTML = this.value;
+        //현재 날자와 range의 값을 addDate에 넘겨 +계산을 한다
         $Datenew.innerHTML=addDate(nowDate,parseInt(this.value));
         startdate=this.value;
     }

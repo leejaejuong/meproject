@@ -239,7 +239,7 @@
         direction: "horizontal",
         loop: true,
         slidesPerView: 6,
-        spaceBetween: 10,
+        spaceBetween: 100,
 
     });
 }
